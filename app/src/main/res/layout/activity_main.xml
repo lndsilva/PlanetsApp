@@ -1,41 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:gravity="center_horizontal|center_vertical"
+    android:orientation="vertical"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imgTerra"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/terra" />
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal|center_vertical">
 
-    <ImageView
-        android:layout_below="@+id/imgTerra"
-        android:id="@+id/imgJupiter"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/jupiter" />
+        <ImageView
+            android:id="@+id/imgTerra"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/terra" />
 
-    <ImageView
-        android:layout_below="@+id/imgJupiter"
-        android:id="@+id/imgMarte"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/marte" />
+        <ImageView
+            android:id="@+id/imgJupiter"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/imgTerra"
+            android:layout_toEndOf="@+id/imgTerra"
+            android:scaleType="centerCrop"
+            android:src="@drawable/jupiter" />
 
-    <ImageView
-        android:layout_below="@+id/imgMarte"
-        android:id="@+id/imgPlutao"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/plutao" />
+        <ImageView
+            android:id="@+id/imgMarte"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/imgJupiter"
+            android:layout_toStartOf="@id/imgJupiter"
+            android:scaleType="centerCrop"
+            android:src="@drawable/marte" />
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/imgPlutao"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_toEndOf="@id/imgJupiter"
+            android:scaleType="centerCrop"
+            android:src="@drawable/plutao" />
+
+        <ImageView
+            android:id="@+id/imgMercurio"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_below="@+id/imgJupiter"
+            android:layout_toEndOf="@id/imgJupiter"
+            android:scaleType="centerCrop"
+            android:src="@drawable/mercurio" />
+    </RelativeLayout>
+</LinearLayout>
